@@ -1,0 +1,74 @@
+
+Para teachers:
+Calcular tpr, fpr
+Probar con distintas cantidades de teachers: TPR, TNR, entrenar mas students
+
+Para student:
+Sacar early stopping (estoy usando 20000 datos etiquetados, leakea info)
+Usar 50-200 datos para calcular el student threshold, y comparar TPR/TNR
+
+
+
+
+PA ESTE JUEVES
+
+documentar todo lo que hice:
+
+Intro de PATE, DP, etc
+caso de estudio, experimentos
+
+
+dos ideas  a futuro:
+redes recurrentes para uri como string
+contexto realista con 3 teachers, uno de cada dataset
+
+
+
+
+
+
+analzar mejor el dataset. Es raro qeu con 100 samples entiendas todos los posibles ataques.
+Es posible que estemos cayendo en una distribución de test set similar a train set?
+
+Comparar numericamente los vectores de train y test
+
+Fijarme mas si no hay label en feature set, o si no esta altamente correlacionada con una feature en particular.
+
+Preguntarle a Sabrina cual notebook uso para generar el dataset.
+
+PyGrid Openmined
+
+
+24/9:
+    Les surgieron dudas de PATE:
+    Cual es la db a la que el student le esta haciendo queries?
+    DP: dos bases de datos adyacentes. Dependiendo de cual es la db, cual es la norma 1 de esta.
+
+    que pasa si queremos proteger los datos del student? estan buscando 
+    fijarse chat en teams la notebook pa privatizar datos
+
+
+agregar DP al bag of words cuando el student le manda datos a los teachers, y ver si la perdida de DP no es muy grande
+pa calcular epsilon hay una relga, no hay que hacer moment accountant
+
+
+
+
+QUE QUIEREN HACER
+
+Agesic debe de liberar los logs de WAF de requests por ley
+
+Agesic debe de velar x la privacidad de los datos, asi q no puede
+
+"construir un dataset sintetico que se pueda liberar"
+
+mas concreto: si alguien se acerca y te pide los datos, vos podes liberar los datos 
+utilizando estos mecanismos
+
+FB libero conjunto de URIs con ruido
+URLv1 una cagada
+URLv2 fue mezcla entre privacidad y anonimización, utilidad miti miti
+URLv3
+
+
+

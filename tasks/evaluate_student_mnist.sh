@@ -1,0 +1,2 @@
+#!/bin/bash
+python classifier/evaluate_student_mnist.py '{"dataset": "MnistDataset", "dataset_args": {"num_workers": 4, "max_student_train_queries":6000}, "model": "Student", "aggregator": "LaplaceAggregator", "aggregator_args": {"gamma": 0.05}, "network": "cnn", "network_teacher": "cnn4", "exp_name": "2020-11-12-19:22-real-cuttlefish", "network_args": {}, "train_args": {"teachers_exp_name": "2020-05-21-16:11-quartz-manul", "batch_size": 64, "epochs": 25, "learning_rate": 0.003}}' --use_wandb

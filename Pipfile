@@ -1,0 +1,32 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+black = "*"
+pylint = "*"
+
+[packages]
+coolname = "==1.1.0"
+gputils = "==1.0.6"
+jupyter = "==1.0.0"
+notebook = "==5.7.8"
+numpy = "==1.18.5"
+pandas = "==0.25.3"
+pytorch-lightning = "==0.8.4"
+scipy = "==1.4.1"
+scikit-learn = "==0.22.2.post1"
+syft = "==0.2.6"
+torch = "==1.4.0"
+torchvision = "==0.5.0"
+tornado = "==4.5.3"
+wandb = "==0.9.1"
+black = "*"
+sklearn = "*"
+
+[requires]
+python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true

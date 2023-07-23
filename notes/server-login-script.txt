@@ -1,0 +1,12 @@
+git clone https://gitlab.com/ai-research-ort/pate-pytorch.git
+sebastian-sosa
+cd pate-pytorch/
+
+git config --global alias.ls "log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+git config --global alias.st status
+
+git config --global user.email "ssosarippe@gmail.com"
+git config --global user.name "Sebastian Sosa"
+
+git checkout feature/train-webrequest-students
+git push origin feature/train-webrequest-students

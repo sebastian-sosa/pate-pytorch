@@ -1,0 +1,10 @@
+num_workers: 4
+samples_per_teacher: 800
+batch_size: 64
+teachers_path: "classifier/weights/teachers/2020-08-24-22:17-cute-tiger"
+input_shape: [500]
+max_student_train_queries: 100000
+gamma: 0.05
+student_data_eps: 0
+classes_count: 2
+num_labels: 15000

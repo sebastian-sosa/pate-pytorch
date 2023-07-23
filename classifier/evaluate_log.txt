@@ -1,0 +1,243 @@
+(pate-pytorch) sebasosa@bengio:~/pate-pytorch$ ./tasks/evaluate_student.sh
+Running experiment with config {'dataset': 'WebrequestDataset', 'dataset_args': {'num_workers': 4, 'max_student_train_queries': 700}, 'model': 'Student', 'aggregator': 'LaplaceAggregator', 'aggregator_args': {'gamma': 0.05}, 'network': 'fcn1', 'network_teacher': 'fcn1', 'exp_name': '2020-11-30-02:42-uncovered-giraffe', 'network_args': {}, 'train_args': {'teachers_exp_name': '2020-07-21-23:19-cautious-roadrunner', 'batch_size': 64, 'epochs': 25, 'learning_rate': 0.003}, 'teacher_preds_path': './classifier/weights/teachers/2020-07-21-23:19-cautious-roadrunner/preds_teacher_1_05.pt', 'train_labels_path': './classifier/weights/teachers/2020-07-21-23:19-cautious-roadrunner/student_labels_1_05.npy'}
+
+Aggregating teacher labels...
+Finding optimal student threshold with 200 samples...
+Calculating epsilon with 30 moments...
+Finding optimal student threshold with 500 samples...
+Calculating epsilon with 30 moments...
+Finding optimal student threshold with 1000 samples...
+Calculating epsilon with 30 moments...
+wandb: Tracking run with wandb version 0.9.1
+wandb: Wandb version 0.10.11 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20201130_025318-122mcoav
+wandb: Syncing run 2020-11-30-02:42-uncovered-giraffe_Student
+wandb: ⭐️ View project at https://app.wandb.ai/sebastian-sosa/pate-pytorch
+wandb: 🚀 View run at https://app.wandb.ai/sebastian-sosa/pate-pytorch/runs/122mcoav
+wandb: Run `wandb off` to turn off syncing.
+
+Finished experiment 2020-11-30-02:42-uncovered-giraffe
+{'experiment': 'no_noise', 'aggregator': 'LaplaceAggregator', 'aggregator_args': {'gamma': 0.05}, 'student_train_queries': 700, 'moments_range': [30.0], 'student_data_eps': 1, 'dde_w_30_mom_200_thr': 8.910585990158948, 'die_w_30_mom_200_thr': 19.256462732485115, 'tp_w_200_thresh': 13455, 'tn_w_200_thresh': 310695, 'fp_w_200_thresh': 8819, 'fn_w_200_thresh': 4214, 'tpr_w_200_thresh': 0.761503197690871, 'tnr_w_200_thresh': 0.9397693548083499, 'optimal_thresholds_w_200_thresh': 0.3727842, 'dde_w_30_mom_500_thr': 11.344531844962003, 'die_w_30_mom_500_thr': 23.51292546497023, 'tp_w_500_thresh': 13444, 'tn_w_500_thresh': 310413, 'fp_w_500_thresh': 8814, 'fn_w_500_thresh': 4212, 'tpr_w_500_thresh': 0.7614408699592207, 'tnr_w_500_thresh': 0.9397693548083499, 'optimal_thresholds_w_500_thresh': 0.3727842, 'dde_w_30_mom_1000_thr': 15.284108608413144, 'die_w_30_mom_1000_thr': 28.51292546497023, 'tp_w_1000_thresh': 15452, 'tn_w_1000_thresh': 299559, 'fp_w_1000_thresh': 19199, 'fn_w_1000_thresh': 2173, 'tpr_w_1000_thresh': 0.876709219858156, 'tnr_w_1000_thresh': 0.9397693548083499, 'optimal_thresholds_w_1000_thresh': 3.05739e-05}
+Running experiment with config {'dataset': 'WebrequestDataset', 'dataset_args': {'num_workers': 4, 'max_student_train_queries': 700}, 'model': 'Student', 'aggregator': 'LaplaceAggregator', 'aggregator_args': {'gamma': 0.05}, 'network': 'fcn1', 'network_teacher': 'fcn1', 'exp_name': '2020-11-30-02:43-discerning-chinchilla', 'network_args': {}, 'train_args': {'teachers_exp_name': '2020-07-21-23:19-cautious-roadrunner', 'batch_size': 64, 'epochs': 25, 'learning_rate': 0.003}, 'teacher_preds_path': './classifier/weights/teachers/2020-07-21-23:19-cautious-roadrunner/preds_teacher_1_1.pt', 'train_labels_path': './classifier/weights/teachers/2020-07-21-23:19-cautious-roadrunner/student_labels_1_1.npy'}
+
+Aggregating teacher labels...
+Finding optimal student threshold with 200 samples...
+Calculating epsilon with 30 moments...
+Finding optimal student threshold with 500 samples...
+Calculating epsilon with 30 moments...
+Finding optimal student threshold with 1000 samples...
+Calculating epsilon with 30 moments...
+
+wandb: Waiting for W&B process to finish, PID 26269
+wandb: Program ended successfully.
+wandb: Run summary:
+wandb:                   tnr_w_200_thresh 0.9397693548083499
+wandb:                   tnr_w_500_thresh 0.9397693548083499
+wandb:               dde_w_30_mom_200_thr 8.910585990158948
+wandb:              dde_w_30_mom_1000_thr 15.284108608413144
+wandb:                   fn_w_1000_thresh 2173
+wandb:                   tpr_w_200_thresh 0.761503197690871
+wandb:                   student_data_eps 1
+wandb:                    tp_w_200_thresh 13455
+wandb:   optimal_thresholds_w_1000_thresh 3.0573901312891394e-05
+wandb:                         _timestamp 1606704800.7444272
+wandb:                    fn_w_500_thresh 4212
+wandb:                    fp_w_200_thresh 8819
+wandb:               dde_w_30_mom_500_thr 11.344531844962003
+wandb:                   fp_w_1000_thresh 19199
+wandb:                         experiment no_noise
+wandb:    optimal_thresholds_w_500_thresh 0.37278419733047485
+wandb:                    fn_w_200_thresh 4214
+wandb:                         aggregator LaplaceAggregator
+wandb:                   tn_w_1000_thresh 299559
+wandb:               die_w_30_mom_200_thr 19.256462732485115
+wandb:                    tn_w_500_thresh 310413
+wandb:                   tp_w_1000_thresh 15452
+wandb:                  tnr_w_1000_thresh 0.9397693548083499
+wandb:    optimal_thresholds_w_200_thresh 0.37278419733047485
+wandb:               die_w_30_mom_500_thr 23.51292546497023
+wandb:                    fp_w_500_thresh 8814
+wandb:                    tn_w_200_thresh 310695
+wandb:                   tpr_w_500_thresh 0.7614408699592207
+wandb:                              _step 0
+wandb:                           _runtime 234.31625723838806
+wandb:                    tp_w_500_thresh 13444
+wandb:              die_w_30_mom_1000_thr 28.51292546497023
+wandb:                  tpr_w_1000_thresh 0.876709219858156
+wandb:              student_train_queries 700
+wandb: Syncing 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb:
+wandb: Synced 2020-11-30-02:42-uncovered-giraffe_Student: https://app.wandb.ai/sebastian-sosa/pate-pytorch/runs/122mcoav
+wandb: Tracking run with wandb version 0.9.1
+wandb: Wandb version 0.10.11 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20201130_025649-2gud3mpx
+wandb: Syncing run 2020-11-30-02:43-discerning-chinchilla_Student
+wandb: ⭐️ View project at https://app.wandb.ai/sebastian-sosa/pate-pytorch
+wandb: 🚀 View run at https://app.wandb.ai/sebastian-sosa/pate-pytorch/runs/2gud3mpx
+wandb: Run `wandb off` to turn off syncing.
+
+Finished experiment 2020-11-30-02:43-discerning-chinchilla
+{'experiment': 'no_noise', 'aggregator': 'LaplaceAggregator', 'aggregator_args': {'gamma': 0.05}, 'student_train_queries': 700, 'moments_range': [30.0], 'student_data_eps': 1, 'dde_w_30_mom_200_thr': 14.328622487415727, 'die_w_30_mom_200_thr': 19.256462732485115, 'tp_w_200_thresh': 12885, 'tn_w_200_thresh': 312605, 'fp_w_200_thresh': 6909, 'fn_w_200_thresh': 4784, 'tpr_w_200_thresh': 0.7292433074876903, 'tnr_w_200_thresh': 0.9453190194442179, 'optimal_thresholds_w_200_thresh': 0.9996476, 'dde_w_30_mom_500_thr': 18.48429333864606, 'die_w_30_mom_500_thr': 23.51292546497023, 'tp_w_500_thresh': 12874, 'tn_w_500_thresh': 312321, 'fp_w_500_thresh': 6906, 'fn_w_500_thresh': 4782, 'tpr_w_500_thresh': 0.7291572270049841, 'tnr_w_500_thresh': 0.9453190194442179, 'optimal_thresholds_w_500_thresh': 0.9996476, 'dde_w_30_mom_1000_thr': 25.22033168358444, 'die_w_30_mom_1000_thr': 28.51292546497023, 'tp_w_1000_thresh': 14848, 'tn_w_1000_thresh': 301328, 'fp_w_1000_thresh': 17430, 'fn_w_1000_thresh': 2777, 'tpr_w_1000_thresh': 0.8424397163120567, 'tnr_w_1000_thresh': 0.9453190194442179, 'optimal_thresholds_w_1000_thresh': 0.016705878}
+Running experiment with config {'dataset': 'WebrequestDataset', 'dataset_args': {'num_workers': 4, 'max_student_train_queries': 700}, 'model': 'Student', 'aggregator': 'LaplaceAggregator', 'aggregator_args': {'gamma': 0.05}, 'network': 'fcn1', 'network_teacher': 'fcn1', 'exp_name': '2020-11-30-02:44-transparent-shark', 'network_args': {}, 'train_args': {'teachers_exp_name': '2020-07-21-23:19-cautious-roadrunner', 'batch_size': 64, 'epochs': 25, 'learning_rate': 0.003}, 'teacher_preds_path': './classifier/weights/teachers/2020-07-21-23:19-cautious-roadrunner/preds_teacher_1_2.pt', 'train_labels_path': './classifier/weights/teachers/2020-07-21-23:19-cautious-roadrunner/student_labels_1_2.npy'}
+
+Aggregating teacher labels...
+Finding optimal student threshold with 200 samples...
+Calculating epsilon with 30 moments...
+Finding optimal student threshold with 500 samples...
+Calculating epsilon with 30 moments...
+Finding optimal student threshold with 1000 samples...
+Calculating epsilon with 30 moments...
+
+wandb: Waiting for W&B process to finish, PID 26416
+wandb: Program ended successfully.
+wandb: Run summary:
+wandb:                   tnr_w_200_thresh 0.9453190194442179
+wandb:                   tnr_w_500_thresh 0.9453190194442179
+wandb:               dde_w_30_mom_200_thr 14.328622487415727
+wandb:              dde_w_30_mom_1000_thr 25.22033168358444
+wandb:                   fn_w_1000_thresh 2777
+wandb:                   tpr_w_200_thresh 0.7292433074876903
+wandb:                   student_data_eps 1
+wandb:                    tp_w_200_thresh 12885
+wandb:   optimal_thresholds_w_1000_thresh 0.01670587807893753
+wandb:                         _timestamp 1606705011.435818
+wandb:                    fn_w_500_thresh 4782
+wandb:                    fp_w_200_thresh 6909
+wandb:               dde_w_30_mom_500_thr 18.48429333864606
+wandb:                   fp_w_1000_thresh 17430
+wandb:                         experiment no_noise
+wandb:    optimal_thresholds_w_500_thresh 0.9996476173400879
+wandb:                    fn_w_200_thresh 4784
+wandb:                         aggregator LaplaceAggregator
+wandb:                   tn_w_1000_thresh 301328
+wandb:               die_w_30_mom_200_thr 19.256462732485115
+wandb:                    tn_w_500_thresh 312321
+wandb:                   tp_w_1000_thresh 14848
+wandb:                  tnr_w_1000_thresh 0.9453190194442179
+wandb:    optimal_thresholds_w_200_thresh 0.9996476173400879
+wandb:               die_w_30_mom_500_thr 23.51292546497023
+wandb:                    fp_w_500_thresh 6906
+wandb:                    tn_w_200_thresh 312605
+wandb:                   tpr_w_500_thresh 0.7291572270049841
+wandb:                              _step 0
+wandb:                           _runtime 445.0076479911804
+wandb:                    tp_w_500_thresh 12874
+wandb:              die_w_30_mom_1000_thr 28.51292546497023
+wandb:                  tpr_w_1000_thresh 0.8424397163120567
+wandb:              student_train_queries 700
+wandb: Syncing 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb:
+wandb: Synced 2020-11-30-02:43-discerning-chinchilla_Student: https://app.wandb.ai/sebastian-sosa/pate-pytorch/runs/2gud3mpx
+wandb: Tracking run with wandb version 0.9.1
+wandb: Wandb version 0.10.11 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20201130_025940-3mpfgr5p
+wandb: Syncing run 2020-11-30-02:44-transparent-shark_Student
+wandb: ⭐️ View project at https://app.wandb.ai/sebastian-sosa/pate-pytorch
+wandb: 🚀 View run at https://app.wandb.ai/sebastian-sosa/pate-pytorch/runs/3mpfgr5p
+wandb: Run `wandb off` to turn off syncing.
+
+Finished experiment 2020-11-30-02:44-transparent-shark
+{'experiment': 'no_noise', 'aggregator': 'LaplaceAggregator', 'aggregator_args': {'gamma': 0.05}, 'student_train_queries': 700, 'moments_range': [30.0], 'student_data_eps': 1, 'dde_w_30_mom_200_thr': 19.256462732485247, 'die_w_30_mom_200_thr': 19.256462732485115, 'tp_w_200_thresh': 11568, 'tn_w_200_thresh': 312931, 'fp_w_200_thresh': 6583, 'fn_w_200_thresh': 6101, 'tpr_w_200_thresh': 0.6547059822287622, 'tnr_w_200_thresh': 0.9073309532623495, 'optimal_thresholds_w_200_thresh': 0.99994063, 'dde_w_30_mom_500_thr': 23.512925464970017, 'die_w_30_mom_500_thr': 23.51292546497023, 'tp_w_500_thresh': 12023, 'tn_w_500_thresh': 311802, 'fp_w_500_thresh': 7425, 'fn_w_500_thresh': 5633, 'tpr_w_500_thresh': 0.68095831445401, 'tnr_w_500_thresh': 0.9073309532623495, 'optimal_thresholds_w_500_thresh': 0.9997937, 'dde_w_30_mom_1000_thr': 28.51292546497009, 'die_w_30_mom_1000_thr': 28.51292546497023, 'tp_w_1000_thresh': 15745, 'tn_w_1000_thresh': 289219, 'fp_w_1000_thresh': 29539, 'fn_w_1000_thresh': 1880, 'tpr_w_1000_thresh': 0.8933333333333333, 'tnr_w_1000_thresh': 0.9073309532623495, 'optimal_thresholds_w_1000_thresh': 0.00013584514}
+Running experiment with config {'dataset': 'WebrequestDataset', 'dataset_args': {'num_workers': 4, 'max_student_train_queries': 700}, 'model': 'Student', 'aggregator': 'LaplaceAggregator', 'aggregator_args': {'gamma': 0.05}, 'network': 'fcn1', 'network_teacher': 'fcn1', 'exp_name': '2020-11-30-02:45-savvy-cuttlefish', 'network_args': {}, 'train_args': {'teachers_exp_name': '2020-07-21-23:19-cautious-roadrunner', 'batch_size': 64, 'epochs': 25, 'learning_rate': 0.003}, 'teacher_preds_path': './classifier/weights/teachers/2020-07-21-23:19-cautious-roadrunner/preds_teacher_1_5.pt', 'train_labels_path': './classifier/weights/teachers/2020-07-21-23:19-cautious-roadrunner/student_labels_1_5.npy'}
+
+Aggregating teacher labels...
+Finding optimal student threshold with 200 samples...
+Calculating epsilon with 30 moments...
+Finding optimal student threshold with 500 samples...
+Calculating epsilon with 30 moments...
+Finding optimal student threshold with 1000 samples...
+Calculating epsilon with 30 moments...
+
+wandb: Waiting for W&B process to finish, PID 26563
+wandb: Program ended successfully.
+wandb: Run summary:
+wandb:                   tnr_w_200_thresh 0.9073309532623495
+wandb:                   tnr_w_500_thresh 0.9073309532623495
+wandb:               dde_w_30_mom_200_thr 19.256462732485247
+wandb:              dde_w_30_mom_1000_thr 28.51292546497009
+wandb:                   fn_w_1000_thresh 1880
+wandb:                   tpr_w_200_thresh 0.6547059822287622
+wandb:                   student_data_eps 1
+wandb:                    tp_w_200_thresh 11568
+wandb:   optimal_thresholds_w_1000_thresh 0.00013584514090325683
+wandb:                         _timestamp 1606705182.3360841
+wandb:                    fn_w_500_thresh 5633
+wandb:                    fp_w_200_thresh 6583
+wandb:               dde_w_30_mom_500_thr 23.512925464970017
+wandb:                   fp_w_1000_thresh 29539
+wandb:                         experiment no_noise
+wandb:    optimal_thresholds_w_500_thresh 0.9997937083244324
+wandb:                    fn_w_200_thresh 6101
+wandb:                         aggregator LaplaceAggregator
+wandb:                   tn_w_1000_thresh 289219
+wandb:               die_w_30_mom_200_thr 19.256462732485115
+wandb:                    tn_w_500_thresh 311802
+wandb:                   tp_w_1000_thresh 15745
+wandb:                  tnr_w_1000_thresh 0.9073309532623495
+wandb:    optimal_thresholds_w_200_thresh 0.9999406337738037
+wandb:               die_w_30_mom_500_thr 23.51292546497023
+wandb:                    fp_w_500_thresh 7425
+wandb:                    tn_w_200_thresh 312931
+wandb:                   tpr_w_500_thresh 0.68095831445401
+wandb:                              _step 0
+wandb:                           _runtime 615.9079141616821
+wandb:                    tp_w_500_thresh 12023
+wandb:              die_w_30_mom_1000_thr 28.51292546497023
+wandb:                  tpr_w_1000_thresh 0.8933333333333333
+wandb:              student_train_queries 700
+wandb: Syncing 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb:
+wandb: Synced 2020-11-30-02:44-transparent-shark_Student: https://app.wandb.ai/sebastian-sosa/pate-pytorch/runs/3mpfgr5p
+wandb: Tracking run with wandb version 0.9.1
+wandb: Wandb version 0.10.11 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Run data is saved locally in wandb/run-20201130_030204-230fzxo6
+wandb: Syncing run 2020-11-30-02:45-savvy-cuttlefish_Student
+wandb: ⭐️ View project at https://app.wandb.ai/sebastian-sosa/pate-pytorch
+wandb: 🚀 View run at https://app.wandb.ai/sebastian-sosa/pate-pytorch/runs/230fzxo6
+wandb: Run `wandb off` to turn off syncing.
+
+Finished experiment 2020-11-30-02:45-savvy-cuttlefish
+{'experiment': 'no_noise', 'aggregator': 'LaplaceAggregator', 'aggregator_args': {'gamma': 0.05}, 'student_train_queries': 700, 'moments_range': [30.0], 'student_data_eps': 1, 'dde_w_30_mom_200_thr': 19.256462732485247, 'die_w_30_mom_200_thr': 19.256462732485115, 'tp_w_200_thresh': 11986, 'tn_w_200_thresh': 314315, 'fp_w_200_thresh': 5199, 'fn_w_200_thresh': 5683, 'tpr_w_200_thresh': 0.6783632350444281, 'tnr_w_200_thresh': 0.950818489261446, 'optimal_thresholds_w_200_thresh': 0.9999119, 'dde_w_30_mom_500_thr': 23.512925464970017, 'die_w_30_mom_500_thr': 23.51292546497023, 'tp_w_500_thresh': 11975, 'tn_w_500_thresh': 314030, 'fp_w_500_thresh': 5197, 'fn_w_500_thresh': 5681, 'tpr_w_500_thresh': 0.6782396918894427, 'tnr_w_500_thresh': 0.950818489261446, 'optimal_thresholds_w_500_thresh': 0.9999119, 'dde_w_30_mom_1000_thr': 28.51292546497009, 'die_w_30_mom_1000_thr': 28.51292546497023, 'tp_w_1000_thresh': 15104, 'tn_w_1000_thresh': 303081, 'fp_w_1000_thresh': 15677, 'fn_w_1000_thresh': 2521, 'tpr_w_1000_thresh': 0.8569645390070922, 'tnr_w_1000_thresh': 0.950818489261446, 'optimal_thresholds_w_1000_thresh': 0.28309953}
+
+wandb: Waiting for W&B process to finish, PID 26712
+wandb: Program ended successfully.
+wandb: Run summary:
+wandb:                   tnr_w_200_thresh 0.950818489261446
+wandb:                   tnr_w_500_thresh 0.950818489261446
+wandb:               dde_w_30_mom_200_thr 19.256462732485247
+wandb:              dde_w_30_mom_1000_thr 28.51292546497009
+wandb:                   fn_w_1000_thresh 2521
+wandb:                   tpr_w_200_thresh 0.6783632350444281
+wandb:                   student_data_eps 1
+wandb:                    tp_w_200_thresh 11986
+wandb:   optimal_thresholds_w_1000_thresh 0.28309953212738037
+wandb:                         _timestamp 1606705325.9482217
+wandb:                    fn_w_500_thresh 5681
+wandb:                    fp_w_200_thresh 5199
+wandb:               dde_w_30_mom_500_thr 23.512925464970017
+wandb:                   fp_w_1000_thresh 15677
+wandb:                         experiment no_noise
+wandb:    optimal_thresholds_w_500_thresh 0.999911904335022
+wandb:                    fn_w_200_thresh 5683
+wandb:                         aggregator LaplaceAggregator
+wandb:                   tn_w_1000_thresh 303081
+wandb:               die_w_30_mom_200_thr 19.256462732485115
+wandb:                    tn_w_500_thresh 314030
+wandb:                   tp_w_1000_thresh 15104
+wandb:                  tnr_w_1000_thresh 0.950818489261446
+wandb:    optimal_thresholds_w_200_thresh 0.999911904335022
+wandb:               die_w_30_mom_500_thr 23.51292546497023
+wandb:                    fp_w_500_thresh 5197
+wandb:                    tn_w_200_thresh 314315
+wandb:                   tpr_w_500_thresh 0.6782396918894427
+wandb:                              _step 0
+wandb:                           _runtime 759.5200517177582
+wandb:                    tp_w_500_thresh 11975
+wandb:              die_w_30_mom_1000_thr 28.51292546497023
+wandb:                  tpr_w_1000_thresh 0.8569645390070922
+wandb:              student_train_queries 700
+wandb: Syncing 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)

@@ -1,0 +1,2 @@
+#!/bin/bash
+python classifier/train_teachers.py '{"dataset": "WebrequestDataset", "dataset_args": {"num_workers": 4}, "model": "Teacher", "network": "fcn1", "network_args": {}, "train_args": {"num_teachers": 250, "learning_rate": 0.005, "batch_size": 128, "epochs": 10}}' --gpus=1 --use_wandb

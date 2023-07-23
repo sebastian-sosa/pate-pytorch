@@ -1,0 +1,30 @@
+MNIST 10 teachers 30 epochs 2020-05-28-19:06-enormous-wildcat > got nice students
+MNIST 100 teachers 30 epochs 2020-05-21-16:11-quartz-manul > got nice students
+SVHN 10 teachers 30 epochs 2020-06-17-20:15-hopping-reindeer
+SVHN 100 teachers 30 epochs 2020-06-16-21:03-fancy-griffin
+WebRequests 100 teachers 2020-07-21-23:19-cautious-roadrunner
+WebRequests 250 teachers 200K samples 2020-08-24-22:17-cute-tiger   // on this one
+WebRequests 250 teachers 400K samples 2020-08-25-04:05-winged-llama
+
+
+For Presentation:
+Baseline
+700: 2020-11-30-01:14-messy-earthworm
+1000: 2020-11-30-01:02-smooth-partridge
+2000: 2020-11-30-0010-vengeful-asp
+3000: 2020-11-30-00:18-marigold-markhor
+5000: 2020-11-30-00:26-dashing-weasel
+
+Privatized student data
+700:
+0.05: 2020-11-30-02:01-outstanding-hippo
+0.1: 2020-11-30-02:02-sceptical-beaver
+0.2: 2020-11-30-02:03-watchful-termite
+0.5: 2020-11-30-02:04-fanatic-mink
+
+1000:
+0.05: 2020-11-30-02:42-uncovered-giraffe
+0.1: 2020-11-30-02:43-discerning-chinchilla
+0.2: 2020-11-30-02:44-transparent-shark
+0.5: 2020-11-30-02:45-savvy-cuttlefish
+
